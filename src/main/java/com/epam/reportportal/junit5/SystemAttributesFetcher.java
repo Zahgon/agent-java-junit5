@@ -1,4 +1,3 @@
-
 /*
  * Copyright 2019 EPAM Systems
  *
@@ -14,12 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 package com.epam.reportportal.junit5;
 
 import com.epam.reportportal.utils.properties.SystemAttributesExtractor;
 import com.epam.ta.reportportal.ws.model.attribute.ItemAttributesRQ;
-
 import java.util.Set;
 
 /**
@@ -27,21 +24,19 @@ import java.util.Set;
  */
 public class SystemAttributesFetcher {
 
-	private static final String SKIPPED_ISSUE_KEY = "skippedIssue";
-	private static final String AGENT_PROPERTIES = "agent.properties";
+    private static final String SKIPPED_ISSUE_KEY = "skippedIssue";
 
-	private static ItemAttributesRQ skippedAnIssue(Boolean fromParams) {
-		ItemAttributesRQ skippedIssueAttr = new ItemAttributesRQ();
-		skippedIssueAttr.setKey(SKIPPED_ISSUE_KEY);
-		skippedIssueAttr.setValue(fromParams == null ? "true" : fromParams.toString());
-		skippedIssueAttr.setSystem(true);
-		return skippedIssueAttr;
-	}
+    private static final String AGENT_PROPERTIES = "agent.properties";
 
-	static Set<ItemAttributesRQ> collectSystemAttributes(Boolean skippedAnIssue) {
-		Set<ItemAttributesRQ> systemAttributes = SystemAttributesExtractor.extract(AGENT_PROPERTIES, SystemAttributesFetcher.class.getClassLoader());
-		systemAttributes.add(skippedAnIssue(skippedAnIssue));
-		return systemAttributes;
-	}
+    private static ItemAttributesRQ skippedAnIssue(Boolean fromParams) {
+        ItemAttributesRQ skippedIssueAttr = new ItemAttributesRQ();
+        skippedIssueAttr.setKey(SKIPPED_ISSUE_KEY);
+        skippedIssueAttr.setValue(fromParams == null ? "true" : fromParams.toString());
+        skippedIssueAttr.setSystem(true);
+        return skippedIssueAttr;
+    }
 
+    static Set<ItemAttributesRQ> collectSystemAttributes(Boolean skippedAnIssue) {
+        throw new UnsupportedOperationException("STUB: not implemented");
+    }
 }

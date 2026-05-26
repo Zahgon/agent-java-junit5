@@ -13,7 +13,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 package com.epam.reportportal.junit5.utils;
 
 import com.epam.reportportal.service.tree.TestItemTree;
@@ -31,41 +30,41 @@ import org.junit.jupiter.api.extension.ExtensionContext;
  */
 public class ItemTreeUtils {
 
-	private ItemTreeUtils() {
-		//static only
-	}
+    private ItemTreeUtils() {
+        //static only
+    }
 
-	public static TestItemTree.ItemTreeKey createItemTreeKey(String name) {
-		return TestItemTree.ItemTreeKey.of(name);
-	}
+    public static TestItemTree.ItemTreeKey createItemTreeKey(String name) {
+        throw new UnsupportedOperationException("STUB: not implemented");
+    }
 
-	public static TestItemTree.ItemTreeKey createItemTreeKey(String name, int hash) {
-		return TestItemTree.ItemTreeKey.of(name, hash);
-	}
+    public static TestItemTree.ItemTreeKey createItemTreeKey(String name, int hash) {
+        throw new UnsupportedOperationException("STUB: not implemented");
+    }
 
-	public static TestItemTree.ItemTreeKey createItemTreeKey(TestInfo testInfo) {
-		return TestItemTree.ItemTreeKey.of(testInfo.getDisplayName());
-	}
+    public static TestItemTree.ItemTreeKey createItemTreeKey(TestInfo testInfo) {
+        throw new UnsupportedOperationException("STUB: not implemented");
+    }
 
-	public static TestItemTree.ItemTreeKey createItemTreeKey(TestInfo testInfo, int hash) {
-		return TestItemTree.ItemTreeKey.of(testInfo.getDisplayName(), hash);
-	}
+    public static TestItemTree.ItemTreeKey createItemTreeKey(TestInfo testInfo, int hash) {
+        throw new UnsupportedOperationException("STUB: not implemented");
+    }
 
-	public static TestItemTree.ItemTreeKey createItemTreeKey(ExtensionContext extensionContext) {
-		return TestItemTree.ItemTreeKey.of(extensionContext.getDisplayName());
-	}
+    public static TestItemTree.ItemTreeKey createItemTreeKey(ExtensionContext extensionContext) {
+        throw new UnsupportedOperationException("STUB: not implemented");
+    }
 
-	public static TestItemTree.ItemTreeKey createItemTreeKey(ExtensionContext extensionContext, int hash) {
-		return TestItemTree.ItemTreeKey.of(extensionContext.getDisplayName(), hash);
-	}
+    public static TestItemTree.ItemTreeKey createItemTreeKey(ExtensionContext extensionContext, int hash) {
+        throw new UnsupportedOperationException("STUB: not implemented");
+    }
 
-	@Nullable
-	public static TestItemTree.TestItemLeaf retrieveLeaf(String name, TestItemTree testItemTree) {
-		return testItemTree.getTestItems().get(createItemTreeKey(name));
-	}
+    @Nullable
+    public static TestItemTree.TestItemLeaf retrieveLeaf(String name, TestItemTree testItemTree) {
+        throw new UnsupportedOperationException("STUB: not implemented");
+    }
 
-	@Nullable
-	public static TestItemTree.TestItemLeaf retrieveLeaf(TestInfo testInfo, TestItemTree testItemTree) {
-		return retrieveLeaf(testInfo.getDisplayName(), testItemTree);
-	}
+    @Nullable
+    public static TestItemTree.TestItemLeaf retrieveLeaf(TestInfo testInfo, TestItemTree testItemTree) {
+        throw new UnsupportedOperationException("STUB: not implemented");
+    }
 }
